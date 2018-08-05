@@ -53,6 +53,23 @@ public partial class CreateProduct : System.Web.UI.Page
 
     protected void btnCreateProduct_Click(object sender, EventArgs e)
     {
+        // let's create a new product
+        NorthwindDataContext db = new NorthwindDataContext();
+        Product p = new Product
+        {
+            ProductName = txtName.Text,
+            SupplierID = Int32.Parse(ddlSuppliers.SelectedItem.Value),
+            CategoryID = Int32.Parse(ddlCategories.SelectedItem.Value),
+            QuantityPerUnit = txtQuantity.Text,
+            UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
+            UnitsInStock = Int16.Parse(txtUnitsInStock.Text),
+            UnitsOnOrder = Int16.Parse(txtUnitsOnOrder.Text),
+            ReorderLevel = Int16.Parse(txtReorderLevel.Text),
+            Discontinued = Convert.ToBoolean(hdnDiscontinued.Value)
+        };
+        db.Products.InsertOnSubmit(p);
+        db.SubmitChanges();
+
         //var x = hdnDiscontinued.Value;
 
         //Utilities.ResetAllControls(this);
