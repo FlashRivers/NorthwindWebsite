@@ -60,30 +60,30 @@ public partial class CreateProduct : System.Web.UI.Page
 
     }
 
-    public class Utilities
-    {
-        public static void ResetAllControls(Control form)
-        {
-            foreach (Control control in form.Controls)
-            {
-                if (control is TextBox textBox)
-                {
-                    textBox.Text = null;
-                }
+    //public class Utilities
+    //{
+    //    public static void ResetAllControls(Control form)
+    //    {
+    //        foreach (Control control in form.Controls)
+    //        {
+    //            if (control is TextBox textBox)
+    //            {
+    //                textBox.Text = null;
+    //            }
 
-                if (control is DropDownList comboBox)
-                {
-                    if (comboBox.Items.Count > 0)
-                        comboBox.SelectedIndex = 0;
-                }
+    //            if (control is DropDownList comboBox)
+    //            {
+    //                if (comboBox.Items.Count > 0)
+    //                    comboBox.SelectedIndex = 0;
+    //            }
 
-                if (control is CheckBox checkBox)
-                {
-                    checkBox.Checked = false;
-                }
+    //            if (control is CheckBox checkBox)
+    //            {
+    //                checkBox.Checked = false;
+    //            }
 
-            }
-        }
-    }
+    //        }
+    //    }
+    //}
 
 }
