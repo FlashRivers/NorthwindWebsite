@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{9BE41BD6-5406-4B33-BBD2-7A7AD8FE9253}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Northwind.Web", "Northwind.Web\", "{EE5B446F-E08F-45E0-87A7-4771A39AB4EB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{3776281c-828e-47cf-8ede-7acbb00eaf9d}|Northwind.Data.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55903"
+		Debug.AspNetCompiler.PhysicalPath = "Northwind.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55903\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55903"
+		Release.AspNetCompiler.PhysicalPath = "Northwind.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55903\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55903"
+		SlnRelativePath = "Northwind.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Data", "Northwind.Data\Northwind.Data.csproj", "{3776281C-828E-47CF-8EDE-7ACBB00EAF9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE5B446F-E08F-45E0-87A7-4771A39AB4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5B446F-E08F-45E0-87A7-4771A39AB4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5B446F-E08F-45E0-87A7-4771A39AB4EB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5B446F-E08F-45E0-87A7-4771A39AB4EB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3776281C-828E-47CF-8EDE-7ACBB00EAF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3776281C-828E-47CF-8EDE-7ACBB00EAF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3776281C-828E-47CF-8EDE-7ACBB00EAF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3776281C-828E-47CF-8EDE-7ACBB00EAF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3776281C-828E-47CF-8EDE-7ACBB00EAF9D} = {9BE41BD6-5406-4B33-BBD2-7A7AD8FE9253}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FA2F47D-4026-4B89-A446-DD57755A7C0A}
+	EndGlobalSection
+EndGlobal
