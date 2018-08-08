@@ -37,4 +37,9 @@ public partial class _Default : Page
         db.SubmitChanges();
 
     }
+
+    protected void lnkAddNew_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CreateProduct.aspx");
+    }
 }

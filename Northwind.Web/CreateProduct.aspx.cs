@@ -103,4 +103,9 @@ public partial class CreateProduct : System.Web.UI.Page
     //    }
     //}
 
+
+    protected void BackLink_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
 }
