@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/masterpages/default.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:LinkButton ID="lnkAddNew" runat="server" OnClick="lnkAddNew_Click">Create New Product</asp:LinkButton>
     <h1>Browse Our Products</h1>
     <hr class="mb-4">
     <asp:Repeater ID="ProductRepeater" runat="server">

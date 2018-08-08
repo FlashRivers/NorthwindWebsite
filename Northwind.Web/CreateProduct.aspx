@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpages/default.master" AutoEventWireup="true" CodeFile="CreateProduct.aspx.cs" Inherits="CreateProduct" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:LinkButton ID="BackLink" runat="server" OnClick="BackLink_Click">Back</asp:LinkButton>
-
     <h1>Create a New Product<asp:Label ID="lblSuccess" runat="server" Text=" - Product added successfully!" Visible="false" CssClass="text-success" /></h1>
     <hr class="mb-4">
     <div class="row">
