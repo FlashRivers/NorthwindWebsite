@@ -4,7 +4,6 @@
     <asp:LinkButton ID="lnkAddNew" runat="server" OnClick="lnkAddNew_Click">Create New Product</asp:LinkButton>
     <h1>Browse Our Products</h1>
     <hr class="mb-4">
-
     <asp:Repeater ID="ProductRepeater" runat="server">
         <HeaderTemplate>
             <table class="table">
