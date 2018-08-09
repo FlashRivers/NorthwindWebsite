@@ -31,6 +31,12 @@
     </asp:Repeater>
 
     <asp:Button ID="InsertButton" runat="server" Text="Insert New Record" OnClick="InsertButton_Click" />
+        <script>
+        $(document).ready(function (e) {
+            alert('Good morning!');
+        });
+    </script>
+
 </asp:Content>
 
 
