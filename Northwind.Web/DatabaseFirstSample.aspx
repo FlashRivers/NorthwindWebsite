@@ -13,8 +13,8 @@
 
         <ItemTemplate>
             <tr>
-                <td><%# DataBinder.Eval(Container.DataItem, "RegionID") %> </td>
-                <td><%# DataBinder.Eval(Container.DataItem, "RegionDescription") %> </td>
+                <td style="width: 75px"><%# DataBinder.Eval(Container.DataItem, "RegionID") %> </td>
+                <td><a href="Territories.aspx?regionid=<%# DataBinder.Eval(Container.DataItem, "RegionID") %>"><%# DataBinder.Eval(Container.DataItem, "RegionDescription") %></a></td>
                 <td></td>
             </tr>
         </ItemTemplate>

@@ -15,6 +15,9 @@ public partial class DatabaseFirstSample : System.Web.UI.Page
             //var region = new Region { RegionDescription = "WestEasternSouth" };
             //db.Regions.Add(region);
             //db.SaveChanges();
+            var region = db.Regions.FirstOrDefault(r => r.RegionID == 2);
+            var territories = region.Territories;
+
             var query = from r in db.Regions
                         orderby r.RegionDescription
                         select r;
