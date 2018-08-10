@@ -7,60 +7,81 @@
     <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.js">\x3C/script>')</script>
     <script>
         $(document).ready(function () {
+            var allInputs = $("#form1 :input");
+            var formChildren = $("form > *");
+            $("#messages").text("Found " + allInputs.length + " inputs and the form has " +
+                formChildren.length + " children.");
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+            });
+
+            var evenRows = $("tr:even");
+            evenRows.css("background-color", "lightgray");
+            evenRows.css("font-weight", "bold");
+
+            alert($('div:contains("my div")').html());
+
             $(':button').each(function () {
-                var elem = $(this); //This is wrapped in a jQuery wrapper: $()
-                alert(elem.val('Foo'));
+                //var elem = $(this); //This is wrapped in a jQuery wrapper: $()
+                //alert(elem.val('Foo'));
 
             });
 
         });
     </script>
+    <script>
+    </script>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>First Name:</td>
-        </tr>
-        <tr>
-            <td>
-                <input id="FirstName" type="text" value="John" />
-            </td>
-        </tr>
-        <tr>
-            <td>Last Name:</td>
-        </tr>
-        <tr>
-            <td>
-                <input id="LastName" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td>State:</td>
-        </tr>
-        <tr>
-            <td>
-                <select id="State">
-                    <option value="AZ">AZ</option>
-                    <option value="CA" selected>CA</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Comments:
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <textarea rows="5" cols="60" id="CommentsTextbox">TextArea</textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input id="SubmitButton" type="button" value="Submit" />
-            </td>
-        </tr>
-    </table>
+    <div id="TestDiv">This is my div text.</div>
+    <div id="messages"></div>
+    <form id="form1">
+        <table>
+            <tr>
+                <td>First Name:</td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="FirstName" type="text" value="John" />
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="LastName" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>State:</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="State">
+                        <option value="AZ">AZ</option>
+                        <option value="CA" selected>CA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comments:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea rows="5" cols="60" id="CommentsTextbox">TextArea</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="SubmitButton" type="button" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </body>
 </html>
