@@ -15,6 +15,8 @@ public partial class _Default : Page
 
         ProductRepeater.DataSource = productObj.GetProducts();
         ProductRepeater.DataBind();
+
+
     }
 
     protected void InsertButton_Click(object sender, EventArgs e)
