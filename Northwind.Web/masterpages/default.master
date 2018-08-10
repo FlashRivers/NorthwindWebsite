@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="text-center">
-        <img src="../images/logo.jpg" alt="Northwind Supply">
+        <a href="Default.aspx"><img src="../images/logo.jpg" alt="Northwind Supply"></a>
     </div>
     <form id="form1" runat="server">
     <div class="container">
