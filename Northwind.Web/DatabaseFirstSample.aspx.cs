@@ -12,9 +12,15 @@ public partial class DatabaseFirstSample : System.Web.UI.Page
     {
         using (var db = new NorthwindEntities())
         {
-            var region = new Region { RegionDescription = "WestEasternSouth" };
-            db.Regions.Add(region);
-            db.SaveChanges();
+            //var region = new Region { RegionDescription = "WestEasternSouth" };
+            //db.Regions.Add(region);
+            //db.SaveChanges();
+            var query = from r in db.Regions
+                        orderby r.RegionDescription
+                        select r;
+
+            RegionRepeater.DataSource = query.ToList();
+            RegionRepeater.DataBind();
         }
     }
 }
