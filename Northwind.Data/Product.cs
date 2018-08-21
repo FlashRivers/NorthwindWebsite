@@ -19,7 +19,7 @@ namespace Northwind.Data
             get { return string.Format("{0:C}", Price); }
         }
 
-        public List<Product> GetProducts()
+        public static List<Product> GetProducts()
         {
             NorthwindDataContext db = new NorthwindDataContext();
             var data = from p in db.Products

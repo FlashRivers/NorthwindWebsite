@@ -11,9 +11,9 @@ public partial class _Default : Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        var productObj = new Product();
+        //var productObj = new Product();
 
-        ProductRepeater.DataSource = productObj.GetProducts();
+        ProductRepeater.DataSource = Product.GetProducts();
         ProductRepeater.DataBind();
 
 

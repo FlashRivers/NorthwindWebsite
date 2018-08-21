@@ -40,12 +40,12 @@ public partial class CreateProduct : System.Web.UI.Page
 
     protected void BindControls()
     {
-        var supplierObj = new Supplier();
-        ddlSuppliers.DataSource = supplierObj.GetSuppliers();
+        //var supplierObj = new Supplier();
+        ddlSuppliers.DataSource = Supplier.GetSuppliers();
         ddlSuppliers.DataBind();
 
-        var categoryObj = new Category();
-        ddlCategories.DataSource = categoryObj.GetCategories();
+        //var categoryObj = new Category();
+        ddlCategories.DataSource = Category.GetCategories();
         ddlCategories.DataBind();
         hdnDiscontinued.Value = System.Convert.ToString(false);
         

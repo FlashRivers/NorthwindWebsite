@@ -11,7 +11,7 @@ namespace Northwind.Data
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public List<Supplier> GetSuppliers()
+        public static List<Supplier> GetSuppliers()
         {
             NorthwindDataContext db = new NorthwindDataContext();
             var data = from s in db.Suppliers

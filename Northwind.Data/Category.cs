@@ -10,7 +10,7 @@ namespace Northwind.Data
     {
         //public int ID { get; set; }
         //public string Name { get; set; }
-        public List<ComboCategory> GetCategories()
+        public static List<ComboCategory> GetCategories()
         {
             using(NorthwindDataContext db = new NorthwindDataContext())
             {
