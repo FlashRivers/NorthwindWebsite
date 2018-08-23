@@ -45,7 +45,7 @@
         }
     </style>
     <style type="text/css" media="screen">
-        html {
+        /*html {
             margin-top: 32px !important;
         }
 
@@ -61,16 +61,40 @@
             * html body {
                 margin-top: 46px !important;
             }
+        }*/
+
+        body {
+            background-color: gray;
         }
+
+        li {
+            list-style: none;
+            float: left;
+            padding-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
-    <div class="event-summary">
+    <nav class="rg-main-navigation">
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Campuses</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+    <!--<div class="event-summary">
         <a class="event-summary__date event-summary__date--beige t-center" href="#">
             <span class="event-summary__month">Jan</span>
             <span class="event-summary__day">20</span>
         </a>
-    </div>
+    </div>-->
 
 </body>
 </html>

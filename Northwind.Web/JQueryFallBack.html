@@ -9,8 +9,10 @@
         $(document).ready(function () {
             alert("Hello, World!");
             $("p").click(function () {
-                $(this).hide();
+                $(this).hide("slow");
             });
+            var val = $('#CustomerDiv').attr('title');
+            alert(val);
         });
     </script>
 </head>
@@ -21,6 +23,7 @@
             <p>Click me away!</p>
             <p>Click me too!</p>
         </div>
+        <div id="CustomerDiv" title="Customer">Here is another line of text.</div>
     </form>
 </body>
 </html>
