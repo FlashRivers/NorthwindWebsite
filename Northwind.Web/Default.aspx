@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h1>Browse Our Products</h1>
     <hr class="mb-4">
-    <asp:Repeater ID="ProductRepeater" runat="server">
+    <asp:Repeater ID="ProductRepeater" runat="server" OnItemDataBound="ProductRepeater_ItemDataBound" EnableViewState="False">
         <HeaderTemplate>
             <table class="table">
                 <tr>
@@ -20,7 +20,7 @@
                 <td><%# DataBinder.Eval(Container.DataItem, "Name") %> </td>
                 <td class="text-right"><%# DataBinder.Eval(Container.DataItem, "DisplayPrice") %> </td>
                 <td class="text-right">
-                    <button>Add to Cart</button></td>
+                    <asp:Button ID="AddtoCartButton" runat="server" Text="Add to Cart" /></td>
             </tr>
         </ItemTemplate>
 

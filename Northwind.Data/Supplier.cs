@@ -13,20 +13,22 @@ namespace Northwind.Data
 
         public static List<Supplier> GetSuppliers()
         {
-            NorthwindDataContext db = new NorthwindDataContext();
-            var data = from s in db.Suppliers
-                       select s;
-            List<Supplier> retval = new List<Supplier>();
-            foreach (var item in data)
+            using (NorthwindDataContext db = new NorthwindDataContext())
             {
-                Supplier newItem = new Supplier
+                var data = from s in db.Suppliers
+                           select s;
+                List<Supplier> retval = new List<Supplier>();
+                foreach (var item in data)
                 {
-                    ID = item.SupplierID,
-                    Name = item.CompanyName
-                };
-                retval.Add(newItem);
+                    Supplier newItem = new Supplier
+                    {
+                        ID = item.SupplierID,
+                        Name = item.CompanyName
+                    };
+                    retval.Add(newItem);
+                }
+                return retval;
             }
-            return retval;
         }
     }
 }

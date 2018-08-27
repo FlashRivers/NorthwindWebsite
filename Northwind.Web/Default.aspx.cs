@@ -39,4 +39,14 @@ public partial class _Default : Page
         db.SubmitChanges();
 
     }
+
+    protected void ProductRepeater_ItemDataBound(object source, RepeaterItemEventArgs e)
+    {
+        if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            Button btn = (Button)e.Item.FindControl("AddtoCartButton");
+            btn.Enabled = false;
+
+        }
+    }
 }
